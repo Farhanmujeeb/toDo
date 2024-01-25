@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 const Task = props => {
   const handleDelete = () => {
-    props.onDelete(props.id); 
+    props.onDelete(props.id);
   };
 
   return (
@@ -13,7 +13,6 @@ const Task = props => {
         <Text style={styles.itemText}>{props.text}</Text>
       </View>
       <TouchableOpacity onPress={handleDelete}>
-      
         <View style={styles.circular}></View>
       </TouchableOpacity>
     </View>
@@ -56,7 +55,7 @@ const styles = StyleSheet.create({
   circular: {
     width: 12,
     height: 12,
-    borderColor: '#FF6347', 
+    borderColor: '#FF6347',
     borderWidth: 2,
     borderRadius: 5,
   },

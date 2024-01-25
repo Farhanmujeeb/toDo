@@ -39,6 +39,7 @@ export default function App() {
 
   const saveTasks = async () => {
     try {
+
       await AsyncStorage.setItem('@tasks', JSON.stringify(taskItems));
     } catch (error) {
       console.error('Error saving tasks:', error);
@@ -64,7 +65,7 @@ export default function App() {
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
-        }}
+           }}
         keyboardShouldPersistTaps="handled">
         <View style={styles.tasksWrapper}>
           <Text style={styles.sectionTitle}>Today's tasks</Text>
@@ -91,7 +92,8 @@ export default function App() {
         />
         <TouchableOpacity onPress={handleAddTask}>
           <View style={styles.addWrapper}>
-            <Text style={styles.addText}>+</Text>
+            <Text style={styles.
+              addText}>+</Text>
           </View>
         </TouchableOpacity>
       </KeyboardAvoidingView>
